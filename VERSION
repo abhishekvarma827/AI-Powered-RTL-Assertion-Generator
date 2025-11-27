@@ -1,0 +1,41 @@
+RTL Assertion Generator
+Version: 1.2.0
+Release Date: November 25, 2025
+Status: Stable Release
+
+CHANGELOG:
+----------
+v1.2.0 (2025-11-25)
+- NEW: Column-based example browser with Category → Design → RTL Type navigation
+- NEW: Multi-color syntax highlighting for generated assertions (Catppuccin theme)
+- FIXED: Grade calculation now always shows proper A-F grade (no more N/A)
+- FIXED: Grade explanation with detailed criteria breakdown
+- NEW: 30+ RTL example designs across 6 categories
+- NEW: Expandable grade card with scoring details
+- IMPROVED: Better coverage calculation algorithm
+- IMPROVED: Modern UI with dark/light theme support
+
+v1.1.0 (2025-11-24)
+- Expanded example dropdown with grouped RTL types
+- Grade details expandable section
+- Basic syntax highlighting
+
+v1.0.0 (2025-11-24)
+- Initial stable release
+- Dual LLM support (Anthropic Claude / Google Gemini)
+- RTL parsing for Verilog/SystemVerilog
+- Automated SVA assertion generation
+- Quality analysis and grading system
+- Testbench generation
+- Multiple export formats
+
+FEATURES (v1.2.0):
+------------------
+✓ Column-based example selector (Category → Design → RTL Type)
+✓ Full syntax highlighting with proper SVA token colors
+✓ Fixed grading system (A-F with detailed breakdown)
+✓ Coverage percentage calculation
+✓ Assertion categorization
+✓ Smart port type inference
+✓ Testbench generation (simple & comprehensive)
+✓ Export to .sv, .txt, .json formats

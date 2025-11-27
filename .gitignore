@@ -1,0 +1,96 @@
+# -------------------------
+# Node.js
+# -------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-store/
+
+# Build / Output
+dist/
+build/
+.cache/
+.next/
+out/
+coverage/
+
+# Environment files
+.env
+.env.*
+
+
+# -------------------------
+# Python
+# -------------------------
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/            # python venv (folder)
+venv.bak/
+env/
+
+# Python packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Logs
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# pytest
+.cache/
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# coverage
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+
+# Django / Flask / FastAPI (optional but safe)
+staticfiles/
+media/
+
+# -------------------------
+# OS-specific
+# -------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
