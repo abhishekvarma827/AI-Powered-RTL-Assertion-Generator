@@ -2026,3 +2026,126 @@ a:focus-visible,
   padding: 1rem 1.5rem !important;
 }
 
+
+/* ===== GRADE POPOVER STYLING - Dropdown style instead of inline expansion ===== */
+
+/* Make grade display container relative for positioning */
+.grade-display-container {
+  position: relative !important;
+}
+
+/* Style the grade explanation as a popover/dropdown */
+.grade-explanation {
+  position: absolute !important;
+  top: calc(100% + 0.5rem) !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 100 !important;
+  background: var(--bg-secondary) !important;
+  border: 2px solid var(--accent-primary) !important;
+  border-radius: 12px !important;
+  padding: 1.25rem !important;
+  margin-top: 0 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 
+              0 0 0 1px rgba(99, 102, 241, 0.2) !important;
+  animation: slideDown 0.2s ease-out !important;
+  max-width: 500px !important;
+}
+
+/* Smooth dropdown animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add a subtle arrow pointer at the top */
+.grade-explanation::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -8px !important;
+  left: 20px !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-left: 8px solid transparent !important;
+  border-right: 8px solid transparent !important;
+  border-bottom: 8px solid var(--accent-primary) !important;
+}
+
+/* Make grade card look clickable */
+.grade-card {
+  cursor: pointer !important;
+  position: relative !important;
+}
+
+.grade-card:hover {
+  transform: scale(1.03) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Style the expand icon to indicate dropdown */
+.grade-expand-icon {
+  transition: transform 0.2s ease !important;
+}
+
+/* Rotate icon when expanded */
+.grade-card.expanded .grade-expand-icon {
+  transform: rotate(180deg) !important;
+}
+
+/* Ensure explanation doesn't affect layout of other elements */
+.grade-explanation {
+  width: auto !important;
+  min-width: 400px !important;
+}
+
+/* Make sure it appears above other content */
+.analysis-header {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Improve readability in popover */
+.grade-explanation h4 {
+  color: var(--accent-primary) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  padding-bottom: 0.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.grade-breakdown {
+  background: var(--bg-tertiary) !important;
+  padding: 0.75rem !important;
+  border-radius: 8px !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.criterion {
+  padding: 0.5rem 0 !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.criterion:last-child {
+  border-bottom: none !important;
+}
+
+.grade-summary {
+  background: rgba(99, 102, 241, 0.1) !important;
+  padding: 0.75rem !important;
+  border-radius: 6px !important;
+  border-left: 3px solid var(--accent-primary) !important;
+}
+
+/* Responsive: adjust popover on smaller screens */
+@media (max-width: 768px) {
+  .grade-explanation {
+    min-width: 300px !important;
+    max-width: 90vw !important;
+  }
+}
+
