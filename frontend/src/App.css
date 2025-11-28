@@ -1923,3 +1923,54 @@ a:focus-visible,
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+/* ===== FIX MODAL FONT SIZES - Make consistent with Category headers ===== */
+
+/* Make Design column items same size as Category headers */
+.column-item {
+  font-size: 0.7rem !important;
+}
+
+.item-name {
+  font-size: 0.7rem !important;
+}
+
+/* Make Quick Access buttons same size as Category headers */
+.quick-buttons button {
+  font-size: 0.7rem !important;
+  padding: 0.6rem 1rem !important;
+}
+
+/* Make modal title more prominent */
+.modal-header h2 {
+  font-size: 0.88rem !important;
+}
+
+/* Make column headers slightly smaller than items */
+.browser-column h3 {
+  font-size: 0.6rem !important;
+}
+
+/* Make type badges readable */
+.type-badge {
+  font-size: 0.65rem !important;
+}
+
+/* Fix category badges at bottom */
+.category-chip {
+  font-size: 0.7rem !important;
+}
+
+.category-name {
+  font-size: 0.7rem !important;
+}
+
+.category-count {
+  font-size: 0.6rem !important;
+}
+
+/* Make category icons consistent */
+.category-icon,
+.item-icon {
+  font-size: 1rem !important;
+}
+
