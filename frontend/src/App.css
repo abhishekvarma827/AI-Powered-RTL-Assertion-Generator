@@ -789,7 +789,7 @@ body {
 }
 
 .coverage-text {
-  font-size: 2rem;
+  font-size: 0.88rem;
   color: var(--text-secondary);
   font-weight: 600;
 }
@@ -2211,5 +2211,331 @@ a:focus-visible,
 .grade-breakdown::before,
 .grade-breakdown::after {
   display: none !important;
+}
+
+
+/* ===== PERFECT SYMMETRICAL METRIC CARDS - ALL SAME SIZE ===== */
+
+/* Override all metric card fonts to be perfectly consistent */
+.metric-card {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  padding: 0.8rem 1rem !important;
+  min-height: 70px !important;
+}
+
+/* Make ALL metric values the same size */
+.metric-value {
+  font-size: 1.4rem !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+}
+
+/* Make ALL metric labels the same size */
+.metric-label {
+  font-size: 0.6rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  line-height: 1 !important;
+}
+
+/* Make ALL metric icons the same size */
+.metric-icon {
+  font-size: 1.5rem !important;
+  line-height: 1 !important;
+}
+
+/* Ensure consistent content alignment */
+.metric-content {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.3rem !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Grade card - match the same style */
+.grade-card {
+  min-height: 70px !important;
+  padding: 0.8rem 1rem !important;
+}
+
+.grade-letter {
+  font-size: 1.4rem !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+}
+
+.grade-label {
+  font-size: 0.6rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Make sure grade icon matches metric icons */
+.grade-main {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.3rem !important;
+  align-items: center !important;
+}
+
+/* Ensure all cards have same height and styling */
+.analysis-header > * {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  height: 70px !important;
+}
+
+/* Perfect vertical centering for all content */
+.metric-card,
+.grade-card {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+
+/* ===== COMPREHENSIVE FONT SIZE CONSISTENCY - FINAL FIX ===== */
+
+/* ========== HEADER SECTION ========== */
+.app-header h1 {
+  font-size: 1.4rem !important;
+}
+
+.version-badge {
+  font-size: 0.65rem !important;
+  padding: 0.4rem 0.8rem !important;
+}
+
+.header-btn {
+  font-size: 0.75rem !important;
+  padding: 0.6rem 1rem !important;
+}
+
+/* ========== PANEL HEADERS ========== */
+.panel-header h2 {
+  font-size: 1rem !important;
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+  font-size: 0.75rem !important;
+  padding: 0.6rem 1rem !important;
+}
+
+.btn-sm {
+  font-size: 0.65rem !important;
+  padding: 0.4rem 0.7rem !important;
+}
+
+.btn-generate {
+  font-size: 0.8rem !important;
+  padding: 0.7rem !important;
+}
+
+/* ========== CODE SECTIONS ========== */
+.code-input,
+.syntax-highlighter,
+.code-editor {
+  font-size: 0.7rem !important;
+  line-height: 1.6 !important;
+}
+
+.line-number {
+  font-size: 0.6rem !important;
+}
+
+/* ========== MODAL ELEMENTS ========== */
+.modal-header h2 {
+  font-size: 0.9rem !important;
+}
+
+.browser-column h3 {
+  font-size: 0.65rem !important;
+}
+
+.column-item,
+.item-name {
+  font-size: 0.75rem !important;
+}
+
+.quick-buttons button {
+  font-size: 0.75rem !important;
+  padding: 0.6rem 1rem !important;
+}
+
+.type-badge {
+  font-size: 0.65rem !important;
+}
+
+/* ========== CATEGORY SECTION ========== */
+.categories-section h3,
+.section-toggle {
+  font-size: 0.85rem !important;
+}
+
+.category-chip {
+  font-size: 0.75rem !important;
+  padding: 0.5rem 0.8rem !important;
+}
+
+.category-name {
+  font-size: 0.75rem !important;
+}
+
+.category-count {
+  font-size: 0.6rem !important;
+  padding: 0.2rem 0.5rem !important;
+}
+
+.category-icon,
+.item-icon {
+  font-size: 1rem !important;
+}
+
+/* ========== SIDEBAR ========== */
+.creator-name-sidebar {
+  font-size: 1.3rem !important;
+}
+
+.creator-education-sidebar {
+  font-size: 0.7rem !important;
+}
+
+.creator-university-sidebar {
+  font-size: 0.75rem !important;
+}
+
+.creator-bio-sidebar {
+  font-size: 0.7rem !important;
+}
+
+.sidebar-btn {
+  font-size: 0.7rem !important;
+  padding: 0.6rem 0.9rem !important;
+}
+
+/* ========== GRADE DISPLAY ========== */
+.grade-letter {
+  font-size: 1.4rem !important;
+}
+
+.grade-label {
+  font-size: 0.6rem !important;
+}
+
+.grade-explanation h4 {
+  font-size: 0.85rem !important;
+}
+
+.criterion {
+  font-size: 0.75rem !important;
+}
+
+.criterion-name,
+.criterion-value {
+  font-size: 0.75rem !important;
+}
+
+.grade-summary {
+  font-size: 0.75rem !important;
+}
+
+/* ========== MODULE INFO ========== */
+.module-info h3 {
+  font-size: 0.75rem !important;
+}
+
+.module-info h4 {
+  font-size: 0.7rem !important;
+}
+
+.port-chip {
+  font-size: 0.65rem !important;
+}
+
+.port-direction {
+  font-size: 0.6rem !important;
+}
+
+.port-name {
+  font-size: 0.65rem !important;
+}
+
+.port-width {
+  font-size: 0.6rem !important;
+}
+
+/* ========== PROGRESS MODAL ========== */
+.progress-stage {
+  font-size: 0.8rem !important;
+}
+
+.progress-message {
+  font-size: 0.75rem !important;
+}
+
+.progress-percentage {
+  font-size: 1.4rem !important;
+}
+
+/* ========== EMPTY STATES ========== */
+.empty-state h3 {
+  font-size: 1rem !important;
+}
+
+.empty-state p {
+  font-size: 0.75rem !important;
+}
+
+/* ========== FOOTER ========== */
+.footer-simple,
+.footer-links a {
+  font-size: 0.7rem !important;
+}
+
+/* ========== CONTROL ELEMENTS ========== */
+.model-select label {
+  font-size: 0.7rem !important;
+}
+
+.model-select select {
+  font-size: 0.7rem !important;
+  padding: 0.5rem 0.7rem !important;
+}
+
+/* ========== ERROR/INFO MESSAGES ========== */
+.error-message {
+  font-size: 0.75rem !important;
+}
+
+.explanation-title {
+  font-size: 0.8rem !important;
+}
+
+.explanation-text {
+  font-size: 0.75rem !important;
+}
+
+/* ========== ENSURE PERFECT CONSISTENCY ========== */
+
+/* Reset any conflicting font sizes */
+* {
+  font-size: inherit;
+}
+
+/* Base consistency */
+body {
+  font-size: 13px !important;
+}
+
+/* Remove any remaining inconsistencies */
+.app * {
+  letter-spacing: normal;
 }
 
