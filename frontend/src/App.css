@@ -2539,3 +2539,207 @@ body {
   letter-spacing: normal;
 }
 
+
+/* ===== FORCEFUL FIX - REMOVE ALL LINE NUMBERS FROM GRADE EXPLANATION ===== */
+
+/* Nuclear option: completely hide anything that looks like a line number */
+.grade-explanation {
+  counter-reset: none !important;
+}
+
+.grade-explanation *::before,
+.grade-explanation *::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Target any numbered list styling */
+.grade-explanation ol,
+.grade-explanation ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.grade-explanation li {
+  list-style: none !important;
+}
+
+.grade-explanation li::marker {
+  display: none !important;
+  content: none !important;
+}
+
+/* Remove any counter-based numbering */
+.grade-breakdown {
+  counter-reset: none !important;
+}
+
+.criterion {
+  counter-increment: none !important;
+}
+
+.criterion::marker {
+  display: none !important;
+}
+
+/* Ensure criterion is properly structured */
+.criterion {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  padding: 0.6rem 0.8rem !important;
+  margin: 0 !important;
+  list-style: none !important;
+  background: transparent !important;
+}
+
+.criterion-name {
+  flex: 1 !important;
+  text-align: left !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.criterion-value {
+  flex: 0 0 auto !important;
+  text-align: right !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Clean slate for grade-breakdown */
+.grade-breakdown {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  padding: 0.75rem !important;
+  margin: 0 !important;
+  background: var(--bg-tertiary) !important;
+  border-radius: 8px !important;
+  list-style: none !important;
+}
+
+/* Remove any potential number sources */
+.grade-explanation [class*="number"],
+.grade-explanation [class*="line"],
+.grade-explanation [class*="count"] {
+  display: none !important;
+}
+
+/* Override any inherited code styles */
+.grade-explanation pre,
+.grade-explanation code {
+  all: unset !important;
+}
+
+/* Make absolutely sure no monospace artifacts */
+.grade-explanation,
+.grade-explanation * {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  line-height: 1.5 !important;
+}
+
+
+/* ===== FINAL FIX - MAKE GRADE POPOVER COVER LINE NUMBERS COMPLETELY ===== */
+
+/* Ensure grade popover is ABOVE everything with solid background */
+.grade-explanation {
+  position: absolute !important;
+  top: calc(100% + 0.5rem) !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 9999 !important;  /* Very high z-index to be above EVERYTHING */
+  background: #1e293b !important;  /* Solid background, no transparency */
+  border: 2px solid #6366f1 !important;
+  border-radius: 12px !important;
+  padding: 1.25rem !important;
+  margin: 0 !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8),
+              0 0 0 1px rgba(99, 102, 241, 0.3) !important;
+  animation: slideDown 0.2s ease-out !important;
+  max-width: 500px !important;
+  min-width: 400px !important;
+}
+
+/* Make sure parent container allows positioning */
+.grade-display-container {
+  position: relative !important;
+  z-index: 100 !important;
+}
+
+/* Ensure the entire analysis header has proper stacking */
+.analysis-header {
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* Make grade card higher z-index when expanded */
+.grade-card {
+  position: relative !important;
+  z-index: 101 !important;
+}
+
+/* Solid, opaque background for grade breakdown */
+.grade-breakdown {
+  background: #0f172a !important;  /* Solid dark background */
+  padding: 0.75rem !important;
+  border-radius: 8px !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Ensure criterion lines have solid background */
+.criterion {
+  background: transparent !important;
+  padding: 0.6rem 0.8rem !important;
+  border-bottom: 1px solid #334155 !important;
+}
+
+/* Solid background for summary */
+.grade-summary {
+  background: rgba(15, 23, 42, 0.95) !important;
+  padding: 0.75rem !important;
+  border-radius: 6px !important;
+  border-left: 3px solid #6366f1 !important;
+}
+
+/* Make sure line numbers from code editor are BEHIND everything */
+.line-numbers {
+  z-index: 1 !important;
+}
+
+.syntax-highlighter {
+  z-index: 1 !important;
+}
+
+.code-content {
+  z-index: 1 !important;
+}
+
+/* Ensure assertions code area is lower z-index */
+.assertions-code {
+  z-index: 1 !important;
+  position: relative !important;
+}
+
+/* Make results panel have lower z-index */
+.results-content {
+  z-index: 1 !important;
+  position: relative !important;
+}
+
+/* Overlay backdrop when grade is expanded (optional enhancement) */
+.grade-card.expanded::after {
+  content: '' !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(0, 0, 0, 0.3) !important;
+  z-index: 50 !important;
+  pointer-events: none !important;
+}
+
