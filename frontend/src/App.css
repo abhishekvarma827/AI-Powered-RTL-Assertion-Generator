@@ -2149,3 +2149,67 @@ a:focus-visible,
   }
 }
 
+
+/* ===== FIX LINE NUMBERS APPEARING IN GRADE EXPLANATION ===== */
+
+/* Hide line numbers in grade explanation */
+.grade-explanation .line-numbers {
+  display: none !important;
+}
+
+/* Ensure grade explanation doesn't inherit line number styling */
+.grade-explanation {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Make sure criterion lines don't show line numbers */
+.criterion {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0.5rem 0 !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.criterion::before {
+  display: none !important;
+}
+
+/* Ensure clean text without line number artifacts */
+.criterion-name,
+.criterion-value {
+  display: inline-block !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Override any monospace font that might be inherited */
+.grade-breakdown,
+.criterion,
+.criterion-name,
+.criterion-value,
+.grade-summary {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Make sure no code styling is inherited */
+.grade-explanation * {
+  font-family: inherit !important;
+}
+
+/* Prevent any line numbering elements from appearing */
+.grade-explanation .line-number {
+  display: none !important;
+}
+
+.grade-explanation .code-line {
+  display: block !important;
+  font-family: inherit !important;
+}
+
+/* Clean up any stray elements */
+.grade-breakdown::before,
+.grade-breakdown::after {
+  display: none !important;
+}
+
