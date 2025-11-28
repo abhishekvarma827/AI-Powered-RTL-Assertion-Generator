@@ -1974,3 +1974,55 @@ a:focus-visible,
   font-size: 1rem !important;
 }
 
+
+/* ===== FIX GRADE DISPLAY FONTS ===== */
+
+/* Make grade letter larger and prominent */
+.grade-letter {
+  font-size: 2.5rem !important;
+  font-weight: 800 !important;
+}
+
+.grade-label {
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+}
+
+/* Make grading criteria readable */
+.grade-explanation h4 {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.criterion {
+  font-size: 0.75rem !important;
+  padding: 0.4rem 0 !important;
+}
+
+.criterion-name {
+  font-size: 0.75rem !important;
+}
+
+.criterion-value {
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+}
+
+.grade-summary {
+  font-size: 0.75rem !important;
+  line-height: 1.5 !important;
+  margin-top: 0.75rem !important;
+}
+
+/* Make grade explanation box bigger */
+.grade-explanation {
+  padding: 1rem !important;
+  margin-top: 1rem !important;
+}
+
+/* Make grade card more prominent */
+.grade-card {
+  padding: 1rem 1.5rem !important;
+}
+
