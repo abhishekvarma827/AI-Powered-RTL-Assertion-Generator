@@ -57,7 +57,7 @@ const CATEGORY_EXPLANATIONS = {
     keywords: ['cover', 'coverpoint', 'bins']
   },
   sequence: {
-    icon: '📋',
+    icon: '⚡',
     title: 'Sequence Assertions',
     description: 'Verify multi-cycle sequential behavior patterns',
     examples: [
@@ -81,7 +81,7 @@ const CATEGORY_EXPLANATIONS = {
     keywords: ['valid', 'ready', 'ack', 'req', 'grant']
   },
   clock: {
-    icon: '🕐',
+    icon: '⚡',
     title: 'Clock Assertions',
     description: 'Verify clock-related properties',
     examples: [
@@ -93,7 +93,7 @@ const CATEGORY_EXPLANATIONS = {
     keywords: ['clk', 'clock', 'edge', 'frequency']
   },
   invariant: {
-    icon: '🔐',
+    icon: '⚡',
     title: 'Invariant Assertions',
     description: 'Properties that must always or never occur',
     examples: [
@@ -138,7 +138,7 @@ const EXAMPLE_CATEGORIES = {
     }
   },
   "Encoders & Decoders": {
-    icon: "🔢",
+    icon: "⚡",
     designs: {
       "4:2 Priority Encoder": {
         types: ["Behavioral"],
@@ -184,7 +184,7 @@ const EXAMPLE_CATEGORIES = {
     }
   },
   "Frequency Dividers": {
-    icon: "📉",
+    icon: "⚡",
     designs: {
       "Divide by 2": {
         types: ["Behavioral"],
@@ -197,7 +197,7 @@ const EXAMPLE_CATEGORIES = {
     }
   },
   "Comparators": {
-    icon: "⚖️",
+    icon: "⚡",
     designs: {
       "1-bit Comparator": {
         types: ["Behavioral", "Dataflow"],
@@ -231,7 +231,7 @@ const EXAMPLE_CATEGORIES = {
     }
   },
   "Shift Registers": {
-    icon: "↔️",
+    icon: "⚡",
     designs: {
       "SISO": {
         types: ["Behavioral"],
@@ -252,7 +252,7 @@ const EXAMPLE_CATEGORIES = {
     }
   },
   "Arithmetic Units": {
-    icon: "🔢",
+    icon: "⚡",
     designs: {
       "ALU (8-bit)": {
         types: ["Behavioral"],
@@ -437,13 +437,13 @@ const ProgressBar = ({ isVisible, stage, progress, message }) => {
   
   const getIcon = () => {
     switch(stage) {
-      case 'loading': return '📂';
+      case 'loading': return '⏳';
       case 'parsing': return '🔍';
       case 'generating': return '⚡';
       case 'analyzing': return '📊';
       case 'testbench': return '🧪';
-      case 'complete': return '✅';
-      default: return '⏳';
+      case 'complete': return '✓';
+      default: return '⚡';
     }
   };
   
@@ -488,7 +488,7 @@ const CategoryDetailModal = ({ category, data, count, onClose }) => {
       <div className="category-detail-modal" onClick={e => e.stopPropagation()}>
         <div className="modal-header">
           <h2>{data.icon} {data.title}</h2>
-          <button className="modal-close" onClick={onClose}>×</button>
+          <button className="modal-close" onClick={onClose}></button>
         </div>
         <div className="category-detail-content">
           <div className="category-count-badge">
@@ -541,8 +541,8 @@ const ExampleSelectorModal = ({ isOpen, onClose, onSelect }) => {
     <div className="modal-overlay" onClick={onClose}>
       <div className="example-modal" onClick={e => e.stopPropagation()}>
         <div className="modal-header">
-          <h2>📚 Load RTL Example</h2>
-          <button className="modal-close" onClick={onClose}>×</button>
+          <h2>📦 Load RTL Example</h2>
+          <button className="modal-close" onClick={onClose}></button>
         </div>
         
         <div className="example-browser">
@@ -578,7 +578,7 @@ const ExampleSelectorModal = ({ isOpen, onClose, onSelect }) => {
                 </button>
               ))}
               {!selectedCategory && (
-                <div className="column-placeholder">← Select a category</div>
+                <div className="column-placeholder">📂 Select a category</div>
               )}
             </div>
           </div>
@@ -601,7 +601,7 @@ const ExampleSelectorModal = ({ isOpen, onClose, onSelect }) => {
                 })
               )}
               {(!selectedCategory || !selectedDesign) && (
-                <div className="column-placeholder">← Select a design</div>
+                <div className="column-placeholder">📄 Select a design</div>
               )}
             </div>
           </div>
@@ -689,7 +689,7 @@ const CategoriesDisplay = ({ categories, isExpanded, onToggle, onCategoryClick, 
           <div className="categories-grid">
             {Object.entries(categories).map(([cat, count]) => {
               const catData = CATEGORY_EXPLANATIONS[cat] || {
-                icon: '📌',
+                icon: '⚡',
                 title: cat,
                 description: `Assertions related to ${cat}`,
                 examples: [],
@@ -717,7 +717,7 @@ const CategoriesDisplay = ({ categories, isExpanded, onToggle, onCategoryClick, 
         <CategoryDetailModal
           category={selectedCategory}
           data={CATEGORY_EXPLANATIONS[selectedCategory] || {
-            icon: '📌',
+            icon: '⚡',
             title: selectedCategory,
             description: `Assertions related to ${selectedCategory}`,
             examples: ['Various checks in this category'],
@@ -752,6 +752,8 @@ function App() {
   const [editedAssertions, setEditedAssertions] = useState('');
   const [filteredCategory, setFilteredCategory] = useState(null);
   const [originalAssertions, setOriginalAssertions] = useState('');
+  const [feedback, setFeedback] = useState('');
+  const [feedbackLoading, setFeedbackLoading] = useState(false);
   
   // Progress state
   const [progressState, setProgressState] = useState({
@@ -1158,6 +1160,33 @@ function App() {
   };
 
   // Export
+
+  // Get AI Feedback
+  const handleGetFeedback = async () => {
+    if (!rtlCode || !moduleInfo) {
+      setError('Please parse RTL code first');
+      return;
+    }
+
+    setFeedbackLoading(true);
+    setError(null);
+
+    try {
+      const response = await axios.post(`${API_BASE}/get-feedback`, {
+        code: rtlCode,
+        module_info: moduleInfo,
+        assertions: assertions || null,
+        model: selectedModel
+      });
+
+      setFeedback(response.data.feedback);
+    } catch (err) {
+      console.error('Feedback error:', err);
+      setError(err.response?.data?.detail || 'Failed to generate feedback. Please check your API configuration.');
+    } finally {
+      setFeedbackLoading(false);
+    }
+  };
   const handleExport = async (format) => {
     if (!assertions) return;
     try {
@@ -1236,7 +1265,7 @@ function App() {
           <div className="panel-header">
             <h2>RTL Code Input</h2>
             <button className="btn btn-secondary" onClick={() => setShowExampleModal(true)} disabled={loading}>
-              📚 Load Example
+              📦 Load Example
             </button>
           </div>
           
@@ -1328,7 +1357,7 @@ function App() {
                   ✏️ {editMode ? 'View' : 'Edit'}
                 </button>
                 <div className="export-dropdown">
-                  <button className="btn btn-sm">📥 Export</button>
+                  <button className="btn btn-sm">💾 Export</button>
                   <div className="dropdown-content">
                     <button onClick={() => handleExport('sv')}>.sv file</button>
                     <button onClick={() => handleExport('txt')}>.txt file</button>
@@ -1370,7 +1399,7 @@ function App() {
                     </div>
                     
                     <div className="metric-card">
-                      <div className="metric-icon">🎯</div>
+                      <div className="metric-icon">📊</div>
                       <div className="metric-content">
                         <div className="metric-value">{Object.keys(analysis.categories || {}).length}</div>
                         <div className="metric-label">Categories</div>
@@ -1378,7 +1407,7 @@ function App() {
                     </div>
                     
                     <div className="metric-card">
-                      <div className="metric-icon">⚡</div>
+                      <div className="metric-icon">✓</div>
                       <div className="metric-content">
                         <div className="metric-value">{selectedModel === 'claude' ? 'Claude' : 'Gemini'}</div>
                         <div className="metric-label">Model</div>
@@ -1425,10 +1454,36 @@ function App() {
                   Comprehensive
                 </button>
               </div>
+              
+              {/* RTL Feedback Section */}
+              <div className="feedback-section">
+                <div className="feedback-header">
+                  <span className="feedback-title">🤖 LLM Feedback</span>
+                  <button 
+                    className="btn btn-sm btn-feedback"
+                    onClick={handleGetFeedback}
+                    disabled={feedbackLoading || !rtlCode}
+                  >
+                    {feedbackLoading ? '⏳ Analyzing...' : '🔍 Get Feedback'}
+                  </button>
+                </div>
+                
+                {feedback && (
+                  <div className="feedback-content">
+                    <pre className="feedback-text">{feedback}</pre>
+                  </div>
+                )}
+                
+                {!feedback && !feedbackLoading && (
+                  <div className="feedback-empty">
+                    <p>Click "Get Feedback" to receive AI-powered analysis of your RTL code and generated assertions.</p>
+                  </div>
+                )}
+              </div>
             </div>
           ) : (
             <div className="empty-state">
-              <div className="empty-icon">📋</div>
+              <div className="empty-icon">📝</div>
               <h3>No Assertions Yet</h3>
               <p>Parse your RTL code and generate assertions to see results here.</p>
             </div>
@@ -1491,7 +1546,7 @@ function App() {
       
       <footer className="app-footer">
         <div className="footer-simple">
-          <p>© 2025 RTL Assertion Generator v{VERSION} | Automating SystemVerilog assertion generation with AI</p>
+          <p> 2025 RTL Assertion Generator v{VERSION} | Automating SystemVerilog assertion generation with AI</p>
           <div className="footer-links">
             <a 
               href="https://www.linkedin.com/in/abhishek-varma-01317415b/" 
@@ -1500,13 +1555,13 @@ function App() {
             >
               LinkedIn
             </a>
-            <span className="separator">•</span>
+            <span className="separator"></span>
             <a 
               href="mailto:avarma10@hawk.illinoistech.edu"
             >
               Contact
             </a>
-            <span className="separator">•</span>
+            <span className="separator"></span>
             <a 
               href="https://buymeacoffee.com/avarma" 
               target="_blank" 
