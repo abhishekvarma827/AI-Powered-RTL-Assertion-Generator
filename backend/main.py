@@ -1,5 +1,5 @@
 """
-RTL Assertion Generator Backend - FIXED VERSION
+RTL Assertion Generator Backend - FIXED VERSION WITH FEEDBACK
 Compatible with llm_interface.py
 """
 
@@ -62,6 +62,13 @@ class ExportRequest(BaseModel):
     module_name: str
     format: str = "sv"
     analysis: Optional[Dict[str, Any]] = None
+
+
+class FeedbackRequest(BaseModel):
+    code: str
+    module_info: Dict[str, Any]
+    assertions: Optional[str] = None
+    model: str = "claude"
 
 
 # Endpoints
@@ -227,9 +234,35 @@ async def get_example(name: str):
     return {"code": code, "name": name}
 
 
+@app.post("/get-feedback")
+async def get_feedback(request: FeedbackRequest):
+    """Get LLM feedback on RTL code and assertions"""
+    try:
+        feedback = llm_interface.get_rtl_feedback(
+            code=request.code,
+            module_info=request.module_info,
+            assertions=request.assertions,
+            model=request.model
+        )
+        
+        return {
+            "feedback": feedback,
+            "timestamp": datetime.now().isoformat()
+        }
+    except Exception as e:
+        import traceback
+        error_details = {
+            "error": str(e),
+            "type": type(e).__name__,
+            "traceback": traceback.format_exc()
+        }
+        print(f"Error in get_feedback: {error_details}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 if __name__ == "__main__":
     import uvicorn
     print("=" * 60)
-    print("RTL Assertion Generator v2.0")
+    print("RTL Assertion Generator v2.0 with Feedback")
     print("=" * 60)
     uvicorn.run(app, host="0.0.0.0", port=8000)
