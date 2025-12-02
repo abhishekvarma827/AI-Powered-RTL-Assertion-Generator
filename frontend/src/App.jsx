@@ -4,7 +4,7 @@ import './App.css';
 import profileImage from './profile.png';
 
 const VERSION = '9.3.1';
-const API_BASE = 'https://ai-powered-rtl-assertion-generator.onrender.com';
+const API_BASE = 'http://localhost:8000';
 
 // Category explanations
 const CATEGORY_EXPLANATIONS = {
@@ -138,7 +138,7 @@ const EXAMPLE_CATEGORIES = {
     }
   },
   "Encoders & Decoders": {
-    icon: "⚡",
+    icon: "🔀",
     designs: {
       "4:2 Priority Encoder": {
         types: ["Behavioral"],
@@ -159,7 +159,7 @@ const EXAMPLE_CATEGORIES = {
     }
   },
   "Sequential Logic": {
-    icon: "🔄",
+    icon: "📟",
     designs: {
       "Up Counter": {
         types: ["Behavioral"],
@@ -184,7 +184,7 @@ const EXAMPLE_CATEGORIES = {
     }
   },
   "Frequency Dividers": {
-    icon: "⚡",
+    icon: "📉",
     designs: {
       "Divide by 2": {
         types: ["Behavioral"],
@@ -197,7 +197,7 @@ const EXAMPLE_CATEGORIES = {
     }
   },
   "Comparators": {
-    icon: "⚡",
+    icon: "⚖️",
     designs: {
       "1-bit Comparator": {
         types: ["Behavioral", "Dataflow"],
@@ -231,7 +231,7 @@ const EXAMPLE_CATEGORIES = {
     }
   },
   "Shift Registers": {
-    icon: "⚡",
+    icon: "🔄",
     designs: {
       "SISO": {
         types: ["Behavioral"],
@@ -252,7 +252,7 @@ const EXAMPLE_CATEGORIES = {
     }
   },
   "Arithmetic Units": {
-    icon: "⚡",
+    icon: "🧮",
     designs: {
       "ALU (8-bit)": {
         types: ["Behavioral"],
