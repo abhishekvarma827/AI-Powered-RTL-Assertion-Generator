@@ -134,7 +134,7 @@ body {
 }
 
 .version-badge {
-  font-size: 0.79rem;
+  font-size: 1.1rem;  /* Increased for readability */
   padding: 0.3rem 1rem;
   background: var(--accent-primary);
   color: white;
@@ -311,7 +311,7 @@ body {
 }
 
 .creator-education-sidebar {
-  font-size: 0.83rem;
+  font-size: 1.1rem;  /* Increased for readability */
   font-weight: 600;
   color: var(--text-primary);
   margin: 0 0 0.25rem 0;
@@ -348,7 +348,7 @@ body {
   gap: 0.3rem;
   padding: 0.36rem 0.54rem;
   border-radius: 8px;
-  font-size: 0.83rem;
+  font-size: 1.1rem;  /* Increased for readability */
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -456,7 +456,7 @@ body {
 
 .btn-sm {
   padding: 0.625rem 1.125rem;
-  font-size: 0.79rem;
+  font-size: 1.1rem;  /* Increased for readability */
 }
 
 .btn-active {
@@ -571,7 +571,7 @@ body {
 }
 
 .model-select label {
-  font-size: 0.83rem;
+  font-size: 1.1rem;  /* Increased for readability */
   color: var(--text-secondary);
 }
 
@@ -581,7 +581,7 @@ body {
   border: 1px solid var(--border-color);
   border-radius: 8px;
   color: var(--text-primary);
-  font-size: 0.83rem;
+  font-size: 1.1rem;  /* Increased for readability */
   cursor: pointer;
 }
 
@@ -602,7 +602,7 @@ body {
 }
 
 .module-info h4 {
-  font-size: 0.83rem;
+  font-size: 1.1rem;  /* Increased for readability */
   margin-bottom: 0.5rem;
   color: var(--text-secondary);
   font-weight: 600;
@@ -662,7 +662,7 @@ body {
   background: var(--bg-tertiary);
   border: 1px solid var(--port-color, var(--border-color));
   border-radius: 6px;
-  font-size: 0.79rem;
+  font-size: 1.1rem;  /* Increased for readability */
   font-family: 'JetBrains Mono', monospace;
   transition: all 0.2s ease;
 }
@@ -687,7 +687,7 @@ body {
 
 .port-width {
   color: var(--text-muted);
-  font-size: 0.36rem;
+  font-size: 1.0rem;  /* Increased for readability */
 }
 
 /* ===== Results Panel ===== */
@@ -811,7 +811,7 @@ body {
 }
 
 .count-label {
-  font-size: 0.79rem;
+  font-size: 1.1rem;  /* Increased for readability */
   text-transform: uppercase;
   color: var(--text-muted);
   letter-spacing: 0.05em;
@@ -877,7 +877,7 @@ body {
   background: none;
   border: none;
   color: var(--text-primary);
-  font-size: 0.36rem;
+  font-size: 1.0rem;  /* Increased for readability */
   text-align: left;
   cursor: pointer;
   transition: 0.15s ease;
@@ -912,7 +912,7 @@ body {
 }
 
 .empty-state p {
-  font-size: 0.83rem;
+  font-size: 1.1rem;  /* Increased for readability */
   color: var(--text-muted);
   max-width: 400px;
 }
@@ -924,7 +924,7 @@ body {
   border: 1px solid var(--error);
   border-radius: 8px;
   color: var(--error);
-  font-size: 0.83rem;
+  font-size: 1.1rem;  /* Increased for readability */
   margin: 1rem;
 }
 
@@ -941,7 +941,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.45rem;
-  font-size: 0.83rem;
+  font-size: 1.1rem;  /* Increased for readability */
   color: var(--text-secondary);
 }
 
@@ -960,7 +960,7 @@ body {
   color: var(--text-primary);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.83rem;
+  font-size: 1.1rem;  /* Increased for readability */
   transition: all 0.2s ease;
 }
 
@@ -1162,7 +1162,7 @@ body {
 }
 
 .progress-message {
-  font-size: 0.83rem;
+  font-size: 1.1rem;  /* Increased for readability */
   color: #94a3b8;
   margin-bottom: 0.75rem;
   min-height: 1.5em;
@@ -1212,7 +1212,7 @@ body {
 }
 
 .category-count-badge .count-label {
-  font-size: 0.79rem;
+  font-size: 1.1rem;  /* Increased for readability */
   color: rgba(255, 255, 255, 0.8);
   margin-top: 0.25rem;
 }
@@ -1222,7 +1222,7 @@ body {
 }
 
 .category-description p {
-  font-size: 0.83rem;
+  font-size: 1.1rem;  /* Increased for readability */
   color: #e2e8f0;
   line-height: 1.6;
 }
@@ -1233,7 +1233,7 @@ body {
 
 .category-examples h4,
 .category-keywords h4 {
-  font-size: 0.36rem;
+  font-size: 1.0rem;  /* Increased for readability */
   font-weight: 600;
   color: #94a3b8;
   margin-bottom: 0.75rem;
@@ -1247,7 +1247,7 @@ body {
 }
 
 .category-examples li {
-  font-size: 0.36rem;
+  font-size: 1.0rem;  /* Increased for readability */
   color: #cbd5e1;
   padding: 0.3rem 0;
   padding-left: 1.5rem;
@@ -1273,7 +1273,7 @@ body {
   border: 1px solid #334155;
   padding: 0.3rem 1rem;
   border-radius: 6px;
-  font-size: 0.36rem;
+  font-size: 1.0rem;  /* Increased for readability */
   font-family: 'JetBrains Mono', monospace;
   color: #a5b4fc;
 }
@@ -1320,7 +1320,7 @@ body {
 }
 
 .category-name {
-  font-size: 0.36rem;
+  font-size: 1.0rem;  /* Increased for readability */
   color: #94a3b8;
   text-transform: capitalize;
 }
@@ -1439,7 +1439,7 @@ body {
   border: 1px solid transparent;
   border-radius: 8px;
   color: #f1f5f9;
-  font-size: 0.36rem;
+  font-size: 1.0rem;  /* Increased for readability */
   text-align: left;
   cursor: pointer;
   transition: 0.15s ease;
@@ -1559,7 +1559,7 @@ body {
 
 .line-number {
   color: #585b70;
-  font-size: 0.79rem;
+  font-size: 1.1rem;  /* Increased for readability */
   min-width: 2.5rem;
   min-height: 1.8em;
   display: flex;
