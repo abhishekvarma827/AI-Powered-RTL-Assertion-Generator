@@ -9,7 +9,7 @@ const VERSION = '9.3.1';
 const API_BASE = process.env.REACT_APP_API_URL || 
   (window.location.hostname === 'localhost' 
     ? 'http://localhost:8000' 
-    : 'https://presiliconverificationtools.netlify.app/');  // Update this to your backend URL
+    : 'https://rtl-assertion-api.onrender.com');  // Update this to your backend URL
 
 // Category explanations
 const CATEGORY_EXPLANATIONS = {
