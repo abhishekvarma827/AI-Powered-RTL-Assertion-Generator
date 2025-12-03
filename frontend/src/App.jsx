@@ -806,7 +806,7 @@ function App() {
     const lines = assertionsText.split('\n');
     const filteredLines = [];
     let inTargetSection = false;
-    let sectionDepth = 0;
+    // let sectionDepth = 0; // Removed unused variable
     
     // Always include module header and footer
     const moduleHeaderLines = [];
