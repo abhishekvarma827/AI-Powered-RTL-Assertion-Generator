@@ -4,7 +4,12 @@ import './App.css';
 import profileImage from './profile.png';
 
 const VERSION = '9.3.1';
-const API_BASE = 'https://presiliconverificationtool.netlify.app/';
+
+// API Base URL - works for both local development and production
+const API_BASE = process.env.REACT_APP_API_URL || 
+  (window.location.hostname === 'localhost' 
+    ? 'http://localhost:8000' 
+    : 'https://rtl-assertion-api.onrender.com');  // Update this to your backend URL
 
 // Category explanations
 const CATEGORY_EXPLANATIONS = {
