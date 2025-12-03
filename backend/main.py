@@ -24,10 +24,15 @@ app = FastAPI(
     description="Generate SystemVerilog Assertions from RTL code"
 )
 
-# CORS middleware
+# CORS middleware - Allow frontend to access backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "https://ai-powered-rtl-assertion-generator.onrender.com",  # Production frontend
+        "http://localhost:3000",  # Local development
+        "http://localhost:3001",  # Alternative local port
+        "*"  # Fallback (remove in production for better security)
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
