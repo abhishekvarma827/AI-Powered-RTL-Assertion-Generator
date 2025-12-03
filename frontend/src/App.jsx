@@ -4,7 +4,7 @@ import './App.css';
 import profileImage from './profile.png';
 
 const VERSION = '9.3.1';
-const API_BASE = 'http://localhost:8000';
+const API_BASE = 'https://presiliconverificationtool.netlify.app/';
 
 // Category explanations
 const CATEGORY_EXPLANATIONS = {
