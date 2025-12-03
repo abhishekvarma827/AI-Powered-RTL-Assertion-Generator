@@ -336,7 +336,7 @@ const SyntaxHighlighter = ({ code }) => {
         
         // SVA operators
         if (!matched) {
-          const svaOpMatch = remaining.match(/^(\|\-\>|\|=\>|##\d*)/);
+          const svaOpMatch = remaining.match(/^(\|->|\|=>|##\d*)/);
           if (svaOpMatch) {
             tokens.push({ type: 'sva-operator', text: svaOpMatch[1] });
             remaining = remaining.slice(svaOpMatch[1].length);
@@ -377,7 +377,7 @@ const SyntaxHighlighter = ({ code }) => {
         
         // Operators
         if (!matched) {
-          const opMatch = remaining.match(/^([<>=!&|^~+\-*/%]+|[{}()\[\];:,@#])/);
+          const opMatch = remaining.match(/^([<>=!&|^~+\-*/%]+|[{}()[\];:,@#])/);
           if (opMatch) {
             tokens.push({ type: 'operator', text: opMatch[1] });
             remaining = remaining.slice(opMatch[1].length);
@@ -870,7 +870,7 @@ function App() {
         
         // Track property/assertion blocks
         if (trimmedLine.includes('property') || trimmedLine.includes('assert') || trimmedLine.includes('cover')) {
-          sectionDepth++;
+          // sectionDepth++; // Removed unused variable
         }
         if (trimmedLine.includes('endproperty') || trimmedLine.includes(';')) {
           // Continue capturing until we hit the next section
@@ -955,7 +955,7 @@ function App() {
   const generateRTLExplanation = (modInfo) => {
     const moduleName = modInfo.name;
     const ports = modInfo.ports || [];
-    const parameters = modInfo.parameters || [];
+    // const parameters = modInfo.parameters || []; // Removed unused variable
     
     // Categorize ports
     const inputs = ports.filter(p => p.direction === 'input');
