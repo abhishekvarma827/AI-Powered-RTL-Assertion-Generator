@@ -28,10 +28,9 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://ai-powered-rtl-assertion-generator.onrender.com",  # Production frontend
+        "https://presiliconverificationtools.netlify.app",  # Production frontend (Netlify)
         "http://localhost:3000",  # Local development
         "http://localhost:3001",  # Alternative local port
-        "*"  # Fallback (remove in production for better security)
     ],
     allow_credentials=True,
     allow_methods=["*"],
