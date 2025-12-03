@@ -44,11 +44,7 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   min-height: 100vh;
-<<<<<<< HEAD
-  font-size: 13px; /* Base font size increased further */
-=======
   font-size: 25px; /* Base font size increased further */
->>>>>>> 0f02ce6 (1verson)
 }
 
 .app {
@@ -2308,65 +2304,37 @@ a:focus-visible,
 
 /* ========== HEADER SECTION ========== */
 .app-header h1 {
-<<<<<<< HEAD
-  font-size: 1.4rem !important;
-}
-
-.version-badge {
-  font-size: 0.65rem !important;
-=======
   font-size: 1.65rem !important;
 }
 
 .version-badge {
   font-size: 0.8rem !important;
->>>>>>> 0f02ce6 (1verson)
   padding: 0.4rem 0.8rem !important;
 }
 
 .header-btn {
-<<<<<<< HEAD
-  font-size: 0.75rem !important;
-=======
   font-size: 0.9rem !important;
->>>>>>> 0f02ce6 (1verson)
   padding: 0.6rem 1rem !important;
 }
 
 /* ========== PANEL HEADERS ========== */
 .panel-header h2 {
-<<<<<<< HEAD
-  font-size: 1rem !important;
-=======
   font-size: 1.2rem !important;
->>>>>>> 0f02ce6 (1verson)
 }
 
 /* ========== BUTTONS ========== */
 .btn {
-<<<<<<< HEAD
-  font-size: 0.75rem !important;
-=======
   font-size: 0.9rem !important;
->>>>>>> 0f02ce6 (1verson)
   padding: 0.6rem 1rem !important;
 }
 
 .btn-sm {
-<<<<<<< HEAD
-  font-size: 0.65rem !important;
-=======
   font-size: 0.8rem !important;
->>>>>>> 0f02ce6 (1verson)
   padding: 0.4rem 0.7rem !important;
 }
 
 .btn-generate {
-<<<<<<< HEAD
-  font-size: 0.8rem !important;
-=======
   font-size: 0.95rem !important;
->>>>>>> 0f02ce6 (1verson)
   padding: 0.7rem !important;
 }
 
@@ -2374,131 +2342,64 @@ a:focus-visible,
 .code-input,
 .syntax-highlighter,
 .code-editor {
-<<<<<<< HEAD
-  font-size: 0.7rem !important;
-=======
   font-size: 0.85rem !important;
->>>>>>> 0f02ce6 (1verson)
   line-height: 1.6 !important;
 }
 
 .line-number {
-<<<<<<< HEAD
-  font-size: 0.6rem !important;
-=======
   font-size: 0.75rem !important;
->>>>>>> 0f02ce6 (1verson)
 }
 
 /* ========== MODAL ELEMENTS ========== */
 .modal-header h2 {
-<<<<<<< HEAD
-  font-size: 0.9rem !important;
-}
-
-.browser-column h3 {
-  font-size: 0.65rem !important;
-=======
   font-size: 1.05rem !important;
 }
 
 .browser-column h3 {
   font-size: 0.8rem !important;
->>>>>>> 0f02ce6 (1verson)
 }
 
 .column-item,
 .item-name {
-<<<<<<< HEAD
-  font-size: 0.75rem !important;
-}
-
-.quick-buttons button {
-  font-size: 0.75rem !important;
-=======
   font-size: 0.9rem !important;
 }
 
 .quick-buttons button {
   font-size: 0.9rem !important;
->>>>>>> 0f02ce6 (1verson)
   padding: 0.6rem 1rem !important;
 }
 
 .type-badge {
-<<<<<<< HEAD
-  font-size: 0.65rem !important;
-=======
   font-size: 0.8rem !important;
->>>>>>> 0f02ce6 (1verson)
 }
 
 /* ========== CATEGORY SECTION ========== */
 .categories-section h3,
 .section-toggle {
-<<<<<<< HEAD
-  font-size: 0.85rem !important;
-}
-
-.category-chip {
-  font-size: 0.75rem !important;
-=======
   font-size: 1rem !important;
 }
 
 .category-chip {
   font-size: 0.9rem !important;
->>>>>>> 0f02ce6 (1verson)
   padding: 0.5rem 0.8rem !important;
 }
 
 .category-name {
-<<<<<<< HEAD
-  font-size: 0.75rem !important;
-}
-
-.category-count {
-  font-size: 0.6rem !important;
-=======
   font-size: 0.9rem !important;
 }
 
 .category-count {
   font-size: 0.75rem !important;
->>>>>>> 0f02ce6 (1verson)
   padding: 0.2rem 0.5rem !important;
 }
 
 .category-icon,
 .item-icon {
-<<<<<<< HEAD
-  font-size: 1rem !important;
-=======
   font-size: 1.2rem !important;
->>>>>>> 0f02ce6 (1verson)
 }
 
 /* ========== SIDEBAR ========== */
 .creator-name-sidebar {
-<<<<<<< HEAD
-  font-size: 1.3rem !important;
-}
-
-.creator-education-sidebar {
-  font-size: 0.7rem !important;
-}
-
-.creator-university-sidebar {
-  font-size: 0.75rem !important;
-}
-
-.creator-bio-sidebar {
-  font-size: 0.7rem !important;
-}
-
-.sidebar-btn {
-  font-size: 0.7rem !important;
-=======
   font-size: 1.5rem !important;
 }
 
@@ -2516,27 +2417,11 @@ a:focus-visible,
 
 .sidebar-btn {
   font-size: 0.85rem !important;
->>>>>>> 0f02ce6 (1verson)
   padding: 0.6rem 0.9rem !important;
 }
 
 /* ========== GRADE DISPLAY ========== */
 .grade-letter {
-<<<<<<< HEAD
-  font-size: 1.4rem !important;
-}
-
-.grade-label {
-  font-size: 0.6rem !important;
-}
-
-.grade-explanation h4 {
-  font-size: 0.85rem !important;
-}
-
-.criterion {
-  font-size: 0.75rem !important;
-=======
   font-size: 1.65rem !important;
 }
 
@@ -2550,51 +2435,19 @@ a:focus-visible,
 
 .criterion {
   font-size: 0.9rem !important;
->>>>>>> 0f02ce6 (1verson)
 }
 
 .criterion-name,
 .criterion-value {
-<<<<<<< HEAD
-  font-size: 0.75rem !important;
-}
-
-.grade-summary {
-  font-size: 0.75rem !important;
-=======
   font-size: 0.9rem !important;
 }
 
 .grade-summary {
   font-size: 0.9rem !important;
->>>>>>> 0f02ce6 (1verson)
 }
 
 /* ========== MODULE INFO ========== */
 .module-info h3 {
-<<<<<<< HEAD
-  font-size: 0.75rem !important;
-}
-
-.module-info h4 {
-  font-size: 0.7rem !important;
-}
-
-.port-chip {
-  font-size: 0.65rem !important;
-}
-
-.port-direction {
-  font-size: 0.6rem !important;
-}
-
-.port-name {
-  font-size: 0.65rem !important;
-}
-
-.port-width {
-  font-size: 0.6rem !important;
-=======
   font-size: 0.9rem !important;
 }
 
@@ -2616,22 +2469,10 @@ a:focus-visible,
 
 .port-width {
   font-size: 0.75rem !important;
->>>>>>> 0f02ce6 (1verson)
 }
 
 /* ========== PROGRESS MODAL ========== */
 .progress-stage {
-<<<<<<< HEAD
-  font-size: 0.8rem !important;
-}
-
-.progress-message {
-  font-size: 0.75rem !important;
-}
-
-.progress-percentage {
-  font-size: 1.4rem !important;
-=======
   font-size: 0.95rem !important;
 }
 
@@ -2641,67 +2482,35 @@ a:focus-visible,
 
 .progress-percentage {
   font-size: 1.65rem !important;
->>>>>>> 0f02ce6 (1verson)
 }
 
 /* ========== EMPTY STATES ========== */
 .empty-state h3 {
-<<<<<<< HEAD
-  font-size: 1rem !important;
-}
-
-.empty-state p {
-  font-size: 0.75rem !important;
-=======
   font-size: 1.2rem !important;
 }
 
 .empty-state p {
   font-size: 0.9rem !important;
->>>>>>> 0f02ce6 (1verson)
 }
 
 /* ========== FOOTER ========== */
 .footer-simple,
 .footer-links a {
-<<<<<<< HEAD
-  font-size: 0.7rem !important;
-=======
   font-size: 0.85rem !important;
->>>>>>> 0f02ce6 (1verson)
 }
 
 /* ========== CONTROL ELEMENTS ========== */
 .model-select label {
-<<<<<<< HEAD
-  font-size: 0.7rem !important;
-}
-
-.model-select select {
-  font-size: 0.7rem !important;
-=======
   font-size: 0.85rem !important;
 }
 
 .model-select select {
   font-size: 0.85rem !important;
->>>>>>> 0f02ce6 (1verson)
   padding: 0.5rem 0.7rem !important;
 }
 
 /* ========== ERROR/INFO MESSAGES ========== */
 .error-message {
-<<<<<<< HEAD
-  font-size: 0.75rem !important;
-}
-
-.explanation-title {
-  font-size: 0.8rem !important;
-}
-
-.explanation-text {
-  font-size: 0.75rem !important;
-=======
   font-size: 0.9rem !important;
 }
 
@@ -2711,7 +2520,6 @@ a:focus-visible,
 
 .explanation-text {
   font-size: 0.9rem !important;
->>>>>>> 0f02ce6 (1verson)
 }
 
 /* ========== ENSURE PERFECT CONSISTENCY ========== */
@@ -2723,11 +2531,7 @@ a:focus-visible,
 
 /* Base consistency */
 body {
-<<<<<<< HEAD
-  font-size: 13px !important;
-=======
   font-size: 16px !important;
->>>>>>> 0f02ce6 (1verson)
 }
 
 /* Remove any remaining inconsistencies */
@@ -2939,8 +2743,6 @@ body {
   pointer-events: none !important;
 }
 
-<<<<<<< HEAD
-=======
 /* ============================================
  * ADD THESE STYLES TO YOUR App.css FILE
  * ============================================ */
@@ -3116,4 +2918,3 @@ body {
 .btn-feedback:disabled {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
->>>>>>> 0f02ce6 (1verson)
