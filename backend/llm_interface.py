@@ -41,7 +41,7 @@ class LLMInterface:
             api_key = os.environ.get('GOOGLE_API_KEY', '')
             if api_key and not api_key.startswith('your-'):
                 genai.configure(api_key=api_key)
-                self.gemini_model = genai.GenerativeModel('gemini-2.0-flash-exp')
+                self.gemini_model = genai.GenerativeModel('gemini-2.5-flash')
         
         # Initialize Anthropic
         if HAS_ANTHROPIC:
